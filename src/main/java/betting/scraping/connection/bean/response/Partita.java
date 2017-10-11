@@ -36,12 +36,22 @@ public class Partita {
 		this.quotaVittoriaCasa = quotaVittoriaCasa;
 	}
 
+	public void setQuotaVittoriaCasa(String quotaVittoriaCasa) {
+		Double quota = new Double(quotaVittoriaCasa);
+		this.quotaVittoriaCasa = quota;
+	}
+
 	public Double getQuotaPareggio() {
 		return quotaPareggio;
 	}
 
 	public void setQuotaPareggio(Double quotaPareggio) {
 		this.quotaPareggio = quotaPareggio;
+	}
+
+	public void setQuotaPareggio(String quotaPareggio) {
+		Double quota = new Double(quotaPareggio);
+		this.quotaPareggio = quota;
 	}
 
 	public Double getQuotaVittoriaFuoriCasa() {
@@ -52,12 +62,22 @@ public class Partita {
 		this.quotaVittoriaFuoriCasa = quotaVittoriaFuoriCasa;
 	}
 
+	public void setQuotaVittoriaFuoriCasa(String quotaVittoriaFuoriCasa) {
+		Double quota = new Double(quotaVittoriaFuoriCasa);
+		this.quotaVittoriaFuoriCasa = quota;
+	}
+
 	public Double getQuotaUnder() {
 		return quotaUnder;
 	}
 
 	public void setQuotaUnder(Double quotaUnder) {
 		this.quotaUnder = quotaUnder;
+	}
+
+	public void setQuotaUnder(String quotaUnder) {
+		Double quota = new Double(quotaUnder);
+		this.quotaUnder = quota;
 	}
 
 	public Double getQuoteOver() {
@@ -68,6 +88,11 @@ public class Partita {
 		this.quoteOver = quoteOver;
 	}
 
+	public void setQuoteOver(String quoteOver) {
+		Double quota = new Double(quoteOver);
+		this.quoteOver = quota;
+	}
+
 	public Double getQuotaGoal() {
 		return quotaGoal;
 	}
@@ -76,12 +101,22 @@ public class Partita {
 		this.quotaGoal = quotaGoal;
 	}
 
+	public void setQuotaGoal(String quotaGoal) {
+		Double quota = new Double(quotaGoal);
+		this.quotaGoal = quota;
+	}
+
 	public Double getQuotaNoGoal() {
 		return quotaNoGoal;
 	}
 
 	public void setQuotaNoGoal(Double quotaNoGoal) {
 		this.quotaNoGoal = quotaNoGoal;
+	}
+
+	public void setQuotaNoGoal(String quotaNoGoal) {
+		Double quota = new Double(quotaNoGoal);
+		this.quotaNoGoal = quota;
 	}
 
 	@Override

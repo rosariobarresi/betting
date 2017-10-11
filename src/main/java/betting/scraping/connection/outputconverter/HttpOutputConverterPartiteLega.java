@@ -1,5 +1,6 @@
 package betting.scraping.connection.outputconverter;
 
+import betting.scraping.connection.bean.response.Partita;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,11 +15,21 @@ public class HttpOutputConverterPartiteLega implements HttpGenericOutputConverte
 	public PartiteLega convertObject(String outputData) {
 		PartiteLega partiteLega = new PartiteLega();
 		Document doc = Jsoup.parse(outputData);
-		Elements elementsByTag = doc.select("div.box_container_scommesse_evento.PBEvent");
-		for (int i = 0; i < elementsByTag.size(); i++) {
-			Element partita = elementsByTag.get(i);
+		Elements matches = doc.select("div.box_container_scommesse_evento.PBEvent");
+		Partita partita;
+		for(Element match : matches){
+			partita = new Partita();
+			partita.setPartita(match.select("div.box_container_scommesse_nomeEvento").text());
+			partita.setQuotaVittoriaCasa((match.select("div.box_container_scommesse_quoteType").get(0)).text());
+			partita.setQuotaPareggio((match.select("div.box_container_scommesse_quoteType").get(1)).text());
+			partita.setQuotaVittoriaFuoriCasa((match.select("div.box_container_scommesse_quoteType").get(2)).text());
+			partita.setQuotaUnder((match.select("div.box_container_scommesse_quoteType").get(3)).text());
+			partita.setQuoteOver((match.select("div.box_container_scommesse_quoteType").get(4)).text());
+			partita.setQuotaGoal((match.select("div.box_container_scommesse_quoteType").get(5)).text());
+			partita.setQuotaNoGoal((match.select("div.box_container_scommesse_quoteType").get(6)).text());
 			System.out.println(partita);
 		}
+
 		return partiteLega;
 	}
 
