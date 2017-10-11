@@ -27,7 +27,7 @@ public class HttpOutputConverterPartiteLega implements HttpGenericOutputConverte
 			partita.setQuoteOver((match.select("div.box_container_scommesse_quoteType").get(4)).text());
 			partita.setQuotaGoal((match.select("div.box_container_scommesse_quoteType").get(5)).text());
 			partita.setQuotaNoGoal((match.select("div.box_container_scommesse_quoteType").get(6)).text());
-			System.out.println(partita);
+			partiteLega.addPartita(partita);
 		}
 
 		return partiteLega;

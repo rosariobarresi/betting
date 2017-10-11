@@ -8,7 +8,7 @@ import betting.scraping.connection.outputconverter.HttpOutputConverterPartiteLeg
 
 public class FactoryConnection {
 
-	public static ScrapingConnection<PartiteLega, EmptyRequest> getIstanceQuadro1(String urlToInvoke, HTTPMethod httpMethod,
+	public static ScrapingConnection<PartiteLega, EmptyRequest> getListaPartiteLega(String urlToInvoke, HTTPMethod httpMethod,
 			HttpOutputConverterPartiteLega httpOutputConverterPartita) {
 		ScrapingConnection<PartiteLega, EmptyRequest> scrapingConnection = new ScrapingConnection<PartiteLega, EmptyRequest>();
 		scrapingConnection.setUrl(urlToInvoke);
