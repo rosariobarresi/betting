@@ -14,7 +14,7 @@ public class HttpOutputConverterPartiteLega implements HttpGenericOutputConverte
 	public PartiteLega convertObject(String outputData) {
 		PartiteLega partiteLega = new PartiteLega();
 		Document doc = Jsoup.parse(outputData);
-		Elements elementsByTag = doc.getElementsByClass("box_container_scommesse_evento PBEvent");
+		Elements elementsByTag = doc.select("div.box_container_scommesse_evento.PBEvent");
 		for (int i = 0; i < elementsByTag.size(); i++) {
 			Element partita = elementsByTag.get(i);
 			System.out.println(partita);
