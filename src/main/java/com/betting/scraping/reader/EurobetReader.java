@@ -7,17 +7,17 @@ import com.betting.scraping.CodaElaborazione;
 import com.betting.scraping.connection.HTTPMethod;
 import com.betting.scraping.connection.ScrapingConnection;
 import com.betting.scraping.connection.bean.request.EmptyRequest;
-import com.betting.scraping.connection.bean.response.Partita;
 import com.betting.scraping.connection.bean.response.PartiteLega;
 import com.betting.scraping.connection.factory.FactoryConnection;
 import com.betting.scraping.connection.interfaces.ScrapingReaderInterface;
 import com.betting.scraping.connection.outputconverter.HttpOutputConverterPartiteLega;
+import com.betting.scraping.writer.WriterMongo;
 
 public class EurobetReader implements ScrapingReaderInterface<PartiteLega> {
 
 	// ?action=scommesseV2_meeting_comm&meetingsParam=22&chooseSport=1&showSplash=0&ts=1507584012702
 	private CodaElaborazione<PartiteLega> codaElaborazione;
-	private String urlToInvoke = "http://web.eurobet.it/webeb/sport";
+	private String urlToInvoke = "http://web.eurobet.it/webeb/sport?action=scommesseV2_meeting_comm&meetingsParam=22&chooseSport=1&showSplash=0&ts=1507584012702";
 
 	@Override
 	public void run() {
@@ -33,6 +33,7 @@ public class EurobetReader implements ScrapingReaderInterface<PartiteLega> {
 		try {
 			PartiteLega invokeService = scraping.invokeService(input);
 			codaElaborazione.enqueue(invokeService);
+			codaElaborazione.setFinishReader(true);
 		} catch (IllegalAccessException | InvocationTargetException | IOException e) {
 			e.printStackTrace();
 		}
@@ -44,9 +45,15 @@ public class EurobetReader implements ScrapingReaderInterface<PartiteLega> {
 	}
 
 	public static void main(String[] args) {
+		CodaElaborazione<PartiteLega> queue = new CodaElaborazione<>();
 		EurobetReader eurobetReader = new EurobetReader();
+		eurobetReader.setCodaElaborazione(queue);
+		WriterMongo writerMongo = new WriterMongo();
+		writerMongo.setCodaElaborazione(queue);
 		Thread t = new Thread(eurobetReader);
+		Thread t2 = new Thread(writerMongo);
 		t.start();
+		t2.start();
 	}
 
 }

@@ -10,7 +10,6 @@ import com.betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
 @XmlType(propOrder = { "partita", "quotaVittoriaCasa", "quotaPareggio", "quotaVittoriaFuoriCasa", "quotaUnder",
 		"quoteOver", "quotaGoal", "quotaNoGoal" })
 public class Partita {
-
 	private String partita;
 	private Double quotaVittoriaCasa;
 	private Double quotaPareggio;
