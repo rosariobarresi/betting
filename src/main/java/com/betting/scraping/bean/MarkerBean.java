@@ -1,4 +1,4 @@
-package betting.scraping.bean;
+package com.betting.scraping.bean;
 
 public interface MarkerBean {
 

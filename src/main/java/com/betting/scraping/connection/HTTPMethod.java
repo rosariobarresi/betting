@@ -1,4 +1,4 @@
-package betting.scraping.connection;
+package com.betting.scraping.connection;
 
 public enum HTTPMethod {
 

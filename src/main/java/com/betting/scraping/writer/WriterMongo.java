@@ -1,12 +1,12 @@
-package betting.scraping.writer;
+package com.betting.scraping.writer;
 
 import java.io.IOException;
 
 import javax.swing.text.AbstractWriter;
 import javax.swing.text.BadLocationException;
 
-import betting.scraping.connection.abstractwriter.WriterAbstract;
-import betting.scraping.connection.bean.response.PartiteLega;
+import com.betting.scraping.connection.abstractwriter.WriterAbstract;
+import com.betting.scraping.connection.bean.response.PartiteLega;
 
 public class WriterMongo extends WriterAbstract<PartiteLega> {
 

@@ -1,10 +1,10 @@
-package betting.scraping.connection.factory;
+package com.betting.scraping.connection.factory;
 
-import betting.scraping.connection.HTTPMethod;
-import betting.scraping.connection.ScrapingConnection;
-import betting.scraping.connection.bean.request.EmptyRequest;
-import betting.scraping.connection.bean.response.PartiteLega;
-import betting.scraping.connection.outputconverter.HttpOutputConverterPartiteLega;
+import com.betting.scraping.connection.HTTPMethod;
+import com.betting.scraping.connection.ScrapingConnection;
+import com.betting.scraping.connection.bean.request.EmptyRequest;
+import com.betting.scraping.connection.bean.response.PartiteLega;
+import com.betting.scraping.connection.outputconverter.HttpOutputConverterPartiteLega;
 
 public class FactoryConnection {
 

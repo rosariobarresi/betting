@@ -1,17 +1,17 @@
-package betting.scraping.reader;
+package com.betting.scraping.reader;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import betting.scraping.CodaElaborazione;
-import betting.scraping.connection.HTTPMethod;
-import betting.scraping.connection.ScrapingConnection;
-import betting.scraping.connection.bean.request.EmptyRequest;
-import betting.scraping.connection.bean.response.Partita;
-import betting.scraping.connection.bean.response.PartiteLega;
-import betting.scraping.connection.factory.FactoryConnection;
-import betting.scraping.connection.interfaces.ScrapingReaderInterface;
-import betting.scraping.connection.outputconverter.HttpOutputConverterPartiteLega;
+import com.betting.scraping.CodaElaborazione;
+import com.betting.scraping.connection.HTTPMethod;
+import com.betting.scraping.connection.ScrapingConnection;
+import com.betting.scraping.connection.bean.request.EmptyRequest;
+import com.betting.scraping.connection.bean.response.Partita;
+import com.betting.scraping.connection.bean.response.PartiteLega;
+import com.betting.scraping.connection.factory.FactoryConnection;
+import com.betting.scraping.connection.interfaces.ScrapingReaderInterface;
+import com.betting.scraping.connection.outputconverter.HttpOutputConverterPartiteLega;
 
 public class EurobetReader implements ScrapingReaderInterface<PartiteLega> {
 

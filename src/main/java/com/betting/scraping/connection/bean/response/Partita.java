@@ -1,10 +1,10 @@
-package betting.scraping.connection.bean.response;
+package com.betting.scraping.connection.bean.response;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import betting.scraping.bean.MarkerBean;
-import betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
+import com.betting.scraping.bean.MarkerBean;
+import com.betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
 
 @XmlRootElement(name = "Partita")
 @XmlType(propOrder = { "partita", "quotaVittoriaCasa", "quotaPareggio", "quotaVittoriaFuoriCasa", "quotaUnder",

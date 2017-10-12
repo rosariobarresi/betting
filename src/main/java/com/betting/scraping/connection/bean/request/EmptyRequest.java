@@ -1,7 +1,7 @@
-package betting.scraping.connection.bean.request;
+package com.betting.scraping.connection.bean.request;
 
-import betting.scraping.connection.HttpParameterKey;
-import betting.scraping.connection.interfaces.ScrapingGenericInput;
+import com.betting.scraping.connection.HttpParameterKey;
+import com.betting.scraping.connection.interfaces.ScrapingGenericInput;
 
 public class EmptyRequest extends ScrapingGenericInput {
 

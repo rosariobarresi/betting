@@ -1,11 +1,11 @@
-package betting.scraping.connection.interfaces;
+package com.betting.scraping.connection.interfaces;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.HttpURLConnection;
 import java.util.Map;
 
-import betting.scraping.connection.HTTPMethod;
+import com.betting.scraping.connection.HTTPMethod;
 
 public interface ScrapingConnectionInterface<T, Z extends ScrapingGenericInput> {
 

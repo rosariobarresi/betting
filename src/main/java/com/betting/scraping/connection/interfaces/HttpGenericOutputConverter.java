@@ -1,4 +1,4 @@
-package betting.scraping.connection.interfaces;
+package com.betting.scraping.connection.interfaces;
 
 public interface HttpGenericOutputConverter<T> {
 	

@@ -1,4 +1,4 @@
-package betting.scraping.connection.interfaces;
+package com.betting.scraping.connection.interfaces;
 
 import java.util.Map;
 

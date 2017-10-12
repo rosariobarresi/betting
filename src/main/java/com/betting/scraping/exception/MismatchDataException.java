@@ -1,4 +1,4 @@
-package betting.scraping.exception;
+package com.betting.scraping.exception;
 
 public class MismatchDataException extends Exception {
   private static final long serialVersionUID = 8652010549805186193L;

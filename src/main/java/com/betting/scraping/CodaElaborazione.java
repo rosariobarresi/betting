@@ -1,9 +1,9 @@
-package betting.scraping;
+package com.betting.scraping;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import betting.scraping.bean.MarkerBean;
+import com.betting.scraping.bean.MarkerBean;
 
 public class CodaElaborazione<T extends MarkerBean> {
 

@@ -1,4 +1,4 @@
-package betting.scraping.exception;
+package com.betting.scraping.exception;
 
 public class BilancioNonConforme extends Exception {
 

@@ -1,4 +1,4 @@
-package betting.scraping.connection.bean.response;
+package com.betting.scraping.connection.bean.response;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import betting.scraping.bean.MarkerBean;
-import betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
+import com.betting.scraping.bean.MarkerBean;
+import com.betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
 
 @XmlRootElement(name = "PartiteLega")
 @XmlType(propOrder = { "listaPartite" })

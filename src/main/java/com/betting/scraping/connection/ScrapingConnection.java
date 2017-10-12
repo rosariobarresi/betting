@@ -1,4 +1,4 @@
-package betting.scraping.connection;
+package com.betting.scraping.connection;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -22,11 +22,11 @@ import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
-import betting.scraping.connection.interfaces.HttpGenericOutputConverter;
-import betting.scraping.connection.interfaces.ScrapingConnectionInterface;
-import betting.scraping.connection.interfaces.ScrapingGenericInput;
-import betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
-import betting.scraping.exception.BadResponseException;
+import com.betting.scraping.connection.interfaces.HttpGenericOutputConverter;
+import com.betting.scraping.connection.interfaces.ScrapingConnectionInterface;
+import com.betting.scraping.connection.interfaces.ScrapingGenericInput;
+import com.betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
+import com.betting.scraping.exception.BadResponseException;
 
 public class ScrapingConnection<T extends ScrapingGenericOutputResponse, Z extends ScrapingGenericInput> implements ScrapingConnectionInterface<T, Z> {
 

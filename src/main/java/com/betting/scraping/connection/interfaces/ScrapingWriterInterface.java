@@ -1,7 +1,7 @@
-package betting.scraping.connection.interfaces;
+package com.betting.scraping.connection.interfaces;
 
-import betting.scraping.CodaElaborazione;
-import betting.scraping.bean.MarkerBean;
+import com.betting.scraping.CodaElaborazione;
+import com.betting.scraping.bean.MarkerBean;
 
 public interface ScrapingWriterInterface<T extends MarkerBean> extends Runnable {
 

@@ -1,13 +1,13 @@
-package betting.scraping.connection.outputconverter;
+package com.betting.scraping.connection.outputconverter;
 
-import betting.scraping.connection.bean.response.Partita;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import betting.scraping.connection.bean.response.PartiteLega;
-import betting.scraping.connection.interfaces.HttpGenericOutputConverter;
+import com.betting.scraping.connection.bean.response.Partita;
+import com.betting.scraping.connection.bean.response.PartiteLega;
+import com.betting.scraping.connection.interfaces.HttpGenericOutputConverter;
 
 public class HttpOutputConverterPartiteLega implements HttpGenericOutputConverter<PartiteLega> {
 

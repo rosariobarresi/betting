@@ -1,8 +1,8 @@
-package betting.scraping.connection.abstractwriter;
+package com.betting.scraping.connection.abstractwriter;
 
-import betting.scraping.CodaElaborazione;
-import betting.scraping.bean.MarkerBean;
-import betting.scraping.connection.interfaces.ScrapingWriterInterface;
+import com.betting.scraping.CodaElaborazione;
+import com.betting.scraping.bean.MarkerBean;
+import com.betting.scraping.connection.interfaces.ScrapingWriterInterface;
 
 public abstract class WriterAbstract<T extends MarkerBean> implements ScrapingWriterInterface<T> {
 

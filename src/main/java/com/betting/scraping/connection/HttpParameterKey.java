@@ -1,4 +1,4 @@
-package betting.scraping.connection;
+package com.betting.scraping.connection;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
