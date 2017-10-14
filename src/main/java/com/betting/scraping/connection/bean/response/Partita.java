@@ -3,9 +3,6 @@ package com.betting.scraping.connection.bean.response;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-import com.betting.scraping.bean.MarkerBean;
-import com.betting.scraping.connection.interfaces.ScrapingGenericOutputResponse;
-
 @XmlRootElement(name = "Partita")
 @XmlType(propOrder = { "partita", "quotaVittoriaCasa", "quotaPareggio", "quotaVittoriaFuoriCasa", "quotaUnder",
 		"quoteOver", "quotaGoal", "quotaNoGoal" })
