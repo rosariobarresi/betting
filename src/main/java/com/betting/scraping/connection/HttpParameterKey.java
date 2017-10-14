@@ -9,6 +9,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface HttpParameterKey {
 	
-	public abstract String value();
+	String value();
 
 }

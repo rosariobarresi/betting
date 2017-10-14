@@ -6,7 +6,7 @@ public enum HTTPMethod {
 
 	private String value;
 
-	private HTTPMethod(String value) {
+	HTTPMethod(String value) {
 		this.value = value;
 	}
 

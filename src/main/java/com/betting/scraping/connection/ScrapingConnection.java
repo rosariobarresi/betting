@@ -102,7 +102,7 @@ public class ScrapingConnection<T extends ScrapingGenericOutputResponse, Z exten
 		oHttpURLConnection.setRequestProperty("Cache-Control", "max-age=0");
 	}
 
-	private void setPostData(String postData, HttpURLConnection oHttpURLConnection) throws IOException, UnsupportedEncodingException {
+	private void setPostData(String postData, HttpURLConnection oHttpURLConnection) throws IOException {
 		OutputStream os = oHttpURLConnection.getOutputStream();
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
 		writer.write(postData);

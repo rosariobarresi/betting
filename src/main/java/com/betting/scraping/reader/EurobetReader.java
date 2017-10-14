@@ -20,7 +20,7 @@ public class EurobetReader implements ScrapingReaderInterface<PartiteLega> {
 	//
 	@Autowired
 	private CodaElaborazione<PartiteLega> codaElaborazione;
-	private String urlToInvoke = "http://web.eurobet.it/webeb/sport?action=scommesseV2_meeting_comm&meetingsParam=22&chooseSport=1&showSplash=0&ts=<ts>";
+	private String urlToInvoke = "http://web.eurobet.it/webeb/sport?action=scommesseV2_meeting_comm&meetingsParam=784&chooseSport=1&showSplash=0&ts=<ts>";
 
 	@Override
 	public void run() {
@@ -34,11 +34,11 @@ public class EurobetReader implements ScrapingReaderInterface<PartiteLega> {
 			try {
 				PartiteLega invokeService = scraping.invokeService(input);
 				codaElaborazione.enqueue(invokeService);
-				codaElaborazione.setFinishReader(true);
 			} catch (IllegalAccessException | InvocationTargetException | IOException e) {
 				e.printStackTrace();
 			} finally {
 				try {
+					System.out.println("POlling");
 					Thread.sleep(60 * 15 * 1000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();

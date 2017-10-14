@@ -2,6 +2,6 @@ package com.betting.scraping.connection.interfaces;
 
 public interface HttpGenericOutputConverter<T> {
 	
-	public T convertObject(String outputData);
+	T convertObject(String outputData);
 
 }
